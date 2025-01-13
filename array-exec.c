@@ -6,6 +6,8 @@
 #define MAX_EMPLOYEES 1000
 
 struct employes_t {
+    int id;
+    int age;
     char name[64];
     char surname[64];
     float income;
@@ -29,7 +31,13 @@ int main(void) {
         arry[i] = i;
         printf("%d ", arry[i]);
     }
-    
+
+    struct employes_t emp[MAX_EMPLOYEES];
+    struct employes_t Steve;
+    Steve.id = 1;
+    Steve.age = 30;
+    strcpy(Steve.name, "Steve");
+    strcpy(Steve.surname, "Smith");
 
     return 0;
 }
