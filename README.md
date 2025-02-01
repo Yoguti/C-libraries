@@ -1,1 +1,1 @@
-Collection of C language code for learning pourpuses
+Collection of C language code for learning purposes
