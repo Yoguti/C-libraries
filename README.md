@@ -1,1 +1,1 @@
-Prop repo for C language experimentation 
+Collection of C language code for learning pourpuses
