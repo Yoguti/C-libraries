@@ -1,4 +1,4 @@
-#include <Stringlib.h>
+#include "Stringlib.h"
 
 // Memory manipulation functions
 void *memcpy_stringlib(void *dest, const void *src, size_t n);
@@ -20,7 +20,18 @@ int strcoll_stringlib(const char *s1, const char *s2);
 size_t strxfrm_stringlib(char *dest, const char *src, size_t n);
 
 // String search functions
-char *strchr_stringlib(const char *s, int c);
+char *strchr_stringlib(const char *s, int c) {
+    char *p = &s[0];
+    while (*p != '\0')
+    {
+        if (*p == c) {
+            return p;
+        }
+        p++;
+    }
+    p = NULL;
+    return NULL;   
+}
 char *strrchr_stringlib(const char *s, int c);
 size_t strcspn_stringlib(const char *s, const char *reject);
 size_t strspn_stringlib(const char *s, const char *accept);
