@@ -4,21 +4,15 @@
 
 int main() {
     char *hi = "This is a test STRING for stringlib.h";
-    int c = 'z';
-    char* ret = strchr(hi, c);
-    char* ret_li = strchr_stringlib(hi, c);
+    char* reject = "s";
 
-    if (ret == NULL) {
-        printf("oi");
-        return 0;
-    }
-    if (ret_li == NULL) {
-        printf("oiii");
-        return 0;
-    }
-    printf("%c\n", *ret);
-    printf("%c\n", *ret_li);
+    size_t restult = strcspn(hi, reject);
 
+    printf("%d\n", (int)restult);
+
+    size_t result = strcspn_stringlib(hi, reject);
+
+    printf("%d", (int)result);
 
 
     return 0;

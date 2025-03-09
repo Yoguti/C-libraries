@@ -32,8 +32,25 @@ char *strchr_stringlib(const char *s, int c) {
     p = NULL;
     return NULL;   
 }
-char *strrchr_stringlib(const char *s, int c);
-size_t strcspn_stringlib(const char *s, const char *reject);
+size_t strcspn_stringlib(const char *s, const char *reject) {
+    size_t size = 0;
+    char *p = &s[0];
+    char *r = &reject[0];
+
+    while (*p != '\0') {
+        while (*r != '\0')
+        {
+            if (*p == *r) {
+                return size;
+            }
+            r++;
+        }
+        r = &reject[0];
+        p++;
+        size++;
+    }
+    return 0;
+}
 size_t strspn_stringlib(const char *s, const char *accept);
 char *strpbrk_stringlib(const char *s, const char *accept);
 char *strstr_stringlib(const char *haystack, const char *needle);
