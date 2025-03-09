@@ -4,13 +4,13 @@
 
 int main() {
     char *hi = "This is a test STRING for stringlib.h";
-    char* reject = "s";
+    char* reject = "This is a test STRING for 9";
 
-    size_t restult = strcspn(hi, reject);
+    size_t restult = strspn(hi, reject);
 
     printf("%d\n", (int)restult);
 
-    size_t result = strcspn_stringlib(hi, reject);
+    size_t result = strspn_stringlib(hi, reject);
 
     printf("%d", (int)result);
 

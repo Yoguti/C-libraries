@@ -51,7 +51,36 @@ size_t strcspn_stringlib(const char *s, const char *reject) {
     }
     return 0;
 }
-size_t strspn_stringlib(const char *s, const char *accept);
+
+size_t strspn_stringlib(const char *s, const char *accept) {
+    size_t size = 0;
+    char *p = &s[0];
+
+    while (*p != '\0')
+    {
+        char *a = &accept[0];
+        int found = 0;
+
+        while (*a != '\0')
+        {
+            if (*p == *a)
+            {
+                found = 1;
+                break;
+            }
+            a++;
+        }
+        if (found == 0)
+        {
+            return size;
+        }
+        size++;
+        p++;
+        
+    }
+    return size;
+
+}
 char *strpbrk_stringlib(const char *s, const char *accept);
 char *strstr_stringlib(const char *haystack, const char *needle);
 char *strtok_stringlib(char *str, const char *delim);
