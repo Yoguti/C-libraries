@@ -21,11 +21,11 @@ size_t strxfrm_stringlib(char *dest, const char *src, size_t n);
 
 // String search functions
 char *strchr_stringlib(const char *s, int c) {
-    char *p = &s[0];
+    const char *p = &s[0];
     while (*p != '\0')
     {
         if (*p == c) {
-            return p;
+            return (char *)p;
         }
         p++;
     }
@@ -34,8 +34,8 @@ char *strchr_stringlib(const char *s, int c) {
 }
 size_t strcspn_stringlib(const char *s, const char *reject) {
     size_t size = 0;
-    char *p = &s[0];
-    char *r = &reject[0];
+    const char *p = &s[0];
+    const char *r = &reject[0];
 
     while (*p != '\0') {
         while (*r != '\0')
@@ -54,11 +54,11 @@ size_t strcspn_stringlib(const char *s, const char *reject) {
 
 size_t strspn_stringlib(const char *s, const char *accept) {
     size_t size = 0;
-    char *p = &s[0];
+    const char *p = &s[0];
 
     while (*p != '\0')
     {
-        char *a = &accept[0];
+        const char *a = &accept[0];
         int found = 0;
 
         while (*a != '\0')
@@ -82,7 +82,7 @@ size_t strspn_stringlib(const char *s, const char *accept) {
 
 }
 char *strpbrk_stringlib(const char *s, const char *accept) {
-    char *p = &s[0];
+    const char *p = &s[0];
 
     while (*p != '\0')
     {
@@ -96,7 +96,7 @@ char *strtok_stringlib(char *str, const char *delim);
 // String length function
 size_t strlen_stringlib(const char *s) {
     size_t size = 0;
-    char *p = &s[0];
+    const char *p = &s[0];
     while (*p != '\0')
     {
         size++;

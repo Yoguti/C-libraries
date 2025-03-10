@@ -26,14 +26,14 @@ size_t strxfrm_stringlib(char *dest, const char *src, size_t n);  // Transform s
 // String search functions
 char *strchr_stringlib(const char *s, int c);                     // Locate character in string
 char *strrchr_stringlib(const char *s, int c);                    // Locate last occurrence of character in string
-size_t strcspn_stringlib(const char *s, const char *reject);      // Get span until character in reject
-size_t strspn_stringlib(const char *s, const char *accept);       // Get span of character in accept
+size_t strcspn_stringlib(const char *s, const char *reject);      // Get span until character in reject [x]
+size_t strspn_stringlib(const char *s, const char *accept);       // Get span of character in accept [x]
 char *strpbrk_stringlib(const char *s, const char *accept);       // Locate any character from accept in string
 char *strstr_stringlib(const char *haystack, const char *needle); // Locate substring
 char *strtok_stringlib(char *str, const char *delim);             // Tokenize string
 
 // String length function
-size_t strlen_stringlib(const char *s);                           // Calculate length of string
+size_t strlen_stringlib(const char *s);                           // Calculate length of string [x]
 
 
 #endif // STRINGLIB_H
