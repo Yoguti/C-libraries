@@ -20,6 +20,20 @@ int strcoll_stringlib(const char *s1, const char *s2);
 size_t strxfrm_stringlib(char *dest, const char *src, size_t n);
 
 // String search functions
+char *strrchr_stringlib(const char *s, int c) {
+    const char *p = &s[0];
+    char *lp = NULL;
+    while (*p != '\0')
+    {
+        if (*p == c) {
+            lp = (char *)p;
+        }
+        p++;
+    }
+    return lp;
+}
+
+
 char *strchr_stringlib(const char *s, int c) {
     const char *p = &s[0];
     while (*p != '\0')

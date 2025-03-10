@@ -2,6 +2,7 @@
     "files.associations": {
         "string.h": "c",
         "chrono": "c",
-        "functional": "c"
+        "functional": "c",
+        "stringlib.h": "c"
     }
 }
