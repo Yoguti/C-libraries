@@ -83,12 +83,19 @@ size_t strspn_stringlib(const char *s, const char *accept) {
 }
 char *strpbrk_stringlib(const char *s, const char *accept) {
     const char *p = &s[0];
-
     while (*p != '\0')
     {
-        /* code */
+        const char *a = &accept[0];
+        while (*a != '\0')
+        {
+            if (*p == *a) {
+                return (char*)p;
+            }
+            a++;
+        }
+        p++;
     }
-    
+    return NULL; 
 }
 char *strstr_stringlib(const char *haystack, const char *needle);
 char *strtok_stringlib(char *str, const char *delim);

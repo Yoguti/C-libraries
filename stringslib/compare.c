@@ -3,16 +3,16 @@
 #include "Stringlib.h"
 
 int main() {
-    char *hi = "This is a test STRING for stringlib.h";
-    char* reject = "This is a test STRING for 9";
+    char *hi = "This0 is a test STRING for stringlib.h9";
+    char* reject = "0123456789";
 
-    size_t restult = strspn(hi, reject);
+    char* RESULT = strpbrk(hi, reject);
 
-    printf("%d\n", (int)restult);
+    printf("%s\n", RESULT);
 
-    size_t result = strspn_stringlib(hi, reject);
+    char* RESULTb = strpbrk_stringlib(hi, reject);
 
-    printf("%d", (int)result);
+    printf("%s", RESULTb);
 
 
     return 0;
