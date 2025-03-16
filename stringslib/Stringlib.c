@@ -3,7 +3,17 @@
 // Memory manipulation functions
 void *memcpy_stringlib(void *dest, const void *src, size_t n);
 void *memmove_stringlib(void *dest, const void *src, size_t n);
-void *memchr_stringlib(const void *s, int c, size_t n);
+void *memchr_stringlib(const void *s, int c, size_t n) {
+    unsigned char *p = (unsigned char*)s;
+
+    for (size_t i = 0; i < n; i++) {
+        if (*p == (unsigned char)c) {
+            return (void*)p;
+        }
+        p++;
+    }
+    return NULL;
+}
 int memcmp_stringlib(const void *s1, const void *s2, size_t n);
 void *memset_stringlib(void *s, int c, size_t n);
 
