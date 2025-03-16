@@ -6,7 +6,7 @@
 
 // Memory manipulation functions
 void *memcpy_stringlib(void *dest, const void *src, size_t n);    // Copy memory area [x]
-void *memmove_stringlib(void *dest, const void *src, size_t n);   // Move memory area
+void *memmove_stringlib(void *dest, const void *src, size_t n);   // Move memory area 
 void *memchr_stringlib(const void *s, int c, size_t n);           // Locate byte in memory area [x]
 int memcmp_stringlib(const void *s1, const void *s2, size_t n);   // Compare memory areas
 void *memset_stringlib(void *s, int c, size_t n);                 // Fill memory with a constant byte
