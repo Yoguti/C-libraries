@@ -42,8 +42,6 @@ Include the header in your code and use the functions as shown below:
            return 0;
        }
 
-## Contributing
-Fork the repository, create a branch, and submit a pull request with your improvements.
-
 ## License
-MIT License.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
