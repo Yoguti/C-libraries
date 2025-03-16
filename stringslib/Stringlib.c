@@ -40,15 +40,19 @@ size_t strxfrm_stringlib(char *dest, const char *src, size_t n);
 
 // String search functions
 char *strrchr_stringlib(const char *s, int c) {
-    const char *p = &s[0];
+    const char *p = &s[0]; 
     char *lp = NULL;
-    while (*p != '\0')
-    {
-        if (*p == c) {
+
+    while (*p != '\0') {
+        if (*p == (char)c) {
             lp = (char *)p;
         }
         p++;
     }
+    if ((char)c == '\0') {
+        return (char *)p;
+    }
+
     return lp;
 }
 

@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 // Memory manipulation functions
-void *memcpy_stringlib(void *dest, const void *src, size_t n);    // Copy memory area
+void *memcpy_stringlib(void *dest, const void *src, size_t n);    // Copy memory area [x]
 void *memmove_stringlib(void *dest, const void *src, size_t n);   // Move memory area
-void *memchr_stringlib(const void *s, int c, size_t n);           // Locate byte in memory area
+void *memchr_stringlib(const void *s, int c, size_t n);           // Locate byte in memory area [x]
 int memcmp_stringlib(const void *s1, const void *s2, size_t n);   // Compare memory areas
 void *memset_stringlib(void *s, int c, size_t n);                 // Fill memory with a constant byte
 
@@ -25,7 +25,7 @@ size_t strxfrm_stringlib(char *dest, const char *src, size_t n);  // Transform s
 
 // String search functions
 char *strchr_stringlib(const char *s, int c);                     // Locate character in string [x]
-char *strrchr_stringlib(const char *s, int c);                    // Locate last occurrence of character in string
+char *strrchr_stringlib(const char *s, int c);                    // Locate last occurrence of character in string [x]
 size_t strcspn_stringlib(const char *s, const char *reject);      // Get span until character in reject [x]
 size_t strspn_stringlib(const char *s, const char *accept);       // Get span of character in accept [x]
 char *strpbrk_stringlib(const char *s, const char *accept);       // Locate any character from accept in string [x]
