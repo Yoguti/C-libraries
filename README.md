@@ -1,10 +1,9 @@
 # My C Libraries
 
-A collection of custom implementations for standard C library functions. Currently focusing on `string.h`.
+A collection of custom implementations for standard C library functions and personal projects. Currently focusing on `string.h`.
 
-## Features
-- Custom implementations of functions like `strlen`, `strcpy`, `strcmp`, etc.
-- Avoids common warnings in standard implementations.
+## Warning
+- These are for learning purposes only, note that even tho the functions work just as intended, they will not throw the usual compiler warnings because the code will be evaluated as user code when read.
 
 ## Installation
 1. Clone the repo:
