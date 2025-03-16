@@ -26,7 +26,6 @@ void *memmove_stringlib(void *dest, const void *src, size_t n) {
         }
     }
 
-
     return dest;
 }
 void *memchr_stringlib(const void *s, int c, size_t n) {
@@ -72,8 +71,6 @@ char *strrchr_stringlib(const char *s, int c) {
 
     return lp;
 }
-
-
 char *strchr_stringlib(const char *s, int c) {
     const char *p = &s[0];
     while (*p != '\0')
@@ -105,7 +102,6 @@ size_t strcspn_stringlib(const char *s, const char *reject) {
     }
     return 0;
 }
-
 size_t strspn_stringlib(const char *s, const char *accept) {
     size_t size = 0;
     const char *p = &s[0];
