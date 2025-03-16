@@ -28,14 +28,14 @@ Include the header in your code and use the functions as shown below:
            char *hi = "abcdefghijklmnopqrstuvwxyz";
            char d[27];
 
-           memcpy(d, hi, sizeof(char) * 28); // gives out warning
+           memcpy(d, hi, sizeof(char) * 28); // normal string.h call
                 
            printf("%s\n", d);
 
            char *hii = "abcdefghijklmnopqrstuvwxyz";
            char dd[27];
 
-           memcpy_stringlib(dd, hii, sizeof(char) * 28); // my implementation, no warning
+           memcpy_stringlib(dd, hii, sizeof(char) * 28); // Stringlib.h call
 
            printf("%s\n", dd);
 
