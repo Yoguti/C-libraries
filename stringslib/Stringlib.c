@@ -1,7 +1,16 @@
 #include "Stringlib.h"
 
 // Memory manipulation functions
-void *memcpy_stringlib(void *dest, const void *src, size_t n);
+void *memcpy_stringlib(void *dest, const void *src, size_t n) {
+    unsigned char *d = (unsigned char*)dest;
+    const unsigned char *s = (unsigned char*)src;
+    
+    for (size_t i = 0; i < n; i++) {
+        *d++ = *s++;
+    }
+
+    return dest;
+}
 void *memmove_stringlib(void *dest, const void *src, size_t n);
 void *memchr_stringlib(const void *s, int c, size_t n) {
     unsigned char *p = (unsigned char*)s;

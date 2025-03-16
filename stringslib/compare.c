@@ -3,18 +3,21 @@
 #include "Stringlib.h"
 
 int main() {
-    char *hi = "This0 is a test STRING for stringlib.h9";
-    //char* reject = "0123456789";
-    int use = '0';
+    
+    char *hi = "abcdefghijklmnopqrstuvwxyz";
+    char d[27];
 
-    char* RESULT = strrchr(hi, use);
+    memcpy(d,hi, sizeof(char) * 28); //gives out warning
+        
+    printf("%s\n", d);
 
-    printf("%s\n", RESULT);
 
-    char* RESULTb = strrchr_stringlib(hi, use);
+    char *hii = "abcdefghijklmnopqrstuvwxyz";
+    char dd[27];
 
-    printf("%s", RESULTb);
+    memcpy_stringlib(dd,hii, sizeof(char) * 28); //my implementation, no warning
 
+    printf("%s\n", dd);
 
     return 0;
 
