@@ -8,8 +8,8 @@
 void *memcpy_stringlib(void *dest, const void *src, size_t n);    // Copy memory area [x]
 void *memmove_stringlib(void *dest, const void *src, size_t n);   // Move memory area [x]
 void *memchr_stringlib(const void *s, int c, size_t n);           // Locate byte in memory area [x]
-int memcmp_stringlib(const void *s1, const void *s2, size_t n);   // Compare memory areas
-void *memset_stringlib(void *s, int c, size_t n);                 // Fill memory with a constant byte
+int memcmp_stringlib(const void *s1, const void *s2, size_t n);   // Compare memory areas [x]
+void *memset_stringlib(void *s, int c, size_t n);                 // Fill memory with a constant byte [x]
 
 // String copy and concatenation functions
 char *strcpy_stringlib(char *dest, const char *src);              // Copy string

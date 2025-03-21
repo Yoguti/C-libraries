@@ -39,8 +39,28 @@ void *memchr_stringlib(const void *s, int c, size_t n) {
     }
     return NULL;
 }
-int memcmp_stringlib(const void *s1, const void *s2, size_t n);
-void *memset_stringlib(void *s, int c, size_t n);
+int memcmp_stringlib(const void *s1, const void *s2, size_t n) {
+    const unsigned char *a = (const unsigned char *) s1;
+    const unsigned char *b = (const unsigned char *) s2;
+
+    for (size_t i = 0; i < n; i++) {
+        if (a[i] != b[i]) {
+            return (int)*a++ - (int)*b++;
+        }
+    }
+    return 0;
+}
+ 
+void *memset_stringlib(void *s, int c, size_t n) {
+    unsigned char *p = (unsigned char *)s;
+
+    for (int i = 0; i < n; i++) {
+        *p = (unsigned char) c;
+        p++;
+    }
+
+    return s;
+}
 
 // String copy and concatenation functions
 char *strcpy_stringlib(char *dest, const char *src);
