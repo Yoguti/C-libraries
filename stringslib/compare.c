@@ -4,21 +4,20 @@
 
 int main() {
     
-    char *hi = "abcdefghijklmnopqrstuvwxyz";
-    char d[27];
+    char buffer[10];
 
-    memcpy(d,hi, sizeof(char) * 28); //gives out warning
-        
-    printf("%s\n", d);
+    memset(buffer, '◯', sizeof(char) * 10);
 
+    for (int i = 0; i < 10; i++) {
+        printf("%c", buffer[i]);
+    }
+    printf("\n");
 
-    char *hii = "abcdefghijklmnopqrstuvwxyz";
-    char dd[27];
+    memset_stringlib(buffer, 'o', sizeof(char) * 10);
 
-    memcpy_stringlib(dd,hii, sizeof(char) * 28); //my implementation, no warning
-
-    printf("%s\n", dd);
-
+    for (int i = 0; i < 10; i++) {
+        printf("%c", buffer[i]);
+    }
     return 0;
 
 }
