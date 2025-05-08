@@ -147,7 +147,20 @@ char *strpbrk_stringlib(const char *s, const char *accept) {
     }
     return NULL; 
 }
-char *strstr_stringlib(const char *haystack, const char *needle);
+char *strstr_stringlib(const char *haystack, const char *needle) {
+    const char *n = &needle[0];
+    const char *p = &haystack[0];
+
+    while (*n != '\0')
+    {
+        if (*n != *p) {
+            p++;
+            n = &needle[0];
+        }
+
+    }
+    
+}
 char *strtok_stringlib(char *str, const char *delim);
 
 // String length function
