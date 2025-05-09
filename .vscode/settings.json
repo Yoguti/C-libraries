@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "array": "c",
+        "sstream": "c",
+        "bitset": "c",
+        "algorithm": "c",
+        "format": "c"
+    }
+}
